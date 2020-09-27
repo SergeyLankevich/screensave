@@ -96,16 +96,17 @@ class Joint(Line):
 
 def draw_help():
     gameDisplay.fill((50, 50, 50))
-    font1 = pygame.font.SysFont("courier", 24)
+    font1 = pygame.font.SysFont("aerial", 24)
     font2 = pygame.font.SysFont("serif", 24)
     data = []
-    data.append(["F1", "Show Help"])
-    data.append(["R", "Restart"])
-    data.append(["P", "Pause/Play"])
-    data.append(["Num+", "More points"])
-    data.append(["Num-", "Less points"])
+    data.append(["F1", "Помощь"])
+    data.append(["R", "Перезапуск"])
+    data.append(["P", "Воспроизвести / Пауза"])
+    data.append(["Num+", "Добавить точку"])
+    data.append(["Num-", "Удалить точку"])
     data.append(["", ""])
-    data.append([str(steps), "Current points"])
+    data.append([str(steps), "текущих точек"])
+    
     pygame.draw.lines(gameDisplay, (255, 50, 50, 255), True, [
         (0, 0), (800, 0), (800, 600), (0, 600)], 5)
     for i, text in enumerate(data):
